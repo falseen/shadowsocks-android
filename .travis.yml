@@ -47,7 +47,7 @@ deploy:
   provider: releases
   api_key:
     secure: fsTWEGUvycr9+/C762CEX7aSSc3HkXYyL/CcDrafhK5YTgnKJap+MR+JZ2WYUMXaRIyiVNRShRIpAGDdfSnfwCANP8x4L0/BINPuMWAaWzvhZLBn9lZUTSFIO3D0y/41pG1YrmaJPkyWI2+Dh0jvZgA3LncORH+v/HhiNZsWn3gFvoYjwuoHsUvdxE1xvYv7vbHaO2SmgiNRdFAphnNmn5B8G5ddSZiP7ZxsZR5hmd+BNlbQDU6pBDIEI1YefR0BMOiEXXfi71/R/DrNSxAnyqR+yGJIA4KK0Znrs/1eKo9zmFRbtrG008CWTCB5dszf8PP0M3thB4TC7BPVJz5NTK2f+kyQgLEX6x9FsJINtmjqbK2I4IBo4Y6RPMHSTTtkuvF5OkCktWkEI/YqjstHgSo5YJbcWEzS7vh5utbalKZTFfEGVUQEy4VnH/417Ka56BebgLbx7+UCrVPn4LoNLAEdnT70AAhAzkmQMG+HfMe4wxIh7pBItqs470bkBtfzzDh2b8iNjU+/QBkda/Qr1WtSrE+ui0Xs2vDX/nLY2bmNL0fsKMqSrRxcvPus+6Iqu+v8gtXhCmh0FvtZUfNoc/TOdjg3TFddjXt2MmE21VnOvL9QD/pAwf7lF36UVyJ9f0WUhG2qmDHTD7ZIGAxH6130Xh/5BgS3hu4LpR9NqRM=
-  file: shadowsocks-debug.apk
+  file: shadowsocks-debug-unaligned.apk
   on:
     repo: falseen/shadowsocks-android
     branch: debug
