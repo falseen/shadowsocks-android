@@ -1,4 +1,4 @@
-#! /data/data/com.github.shadowsocks/qpython32/bin/qpython-android5.sh
+#! /data/user/0/com.github.shadowsocks/qpython32/bin/qpython-android5.sh
 # -*- coding: utf-8 -*-
 
 import time,sys,os
@@ -6,7 +6,7 @@ from shadowsocks.local import main as local_main
 
 
 def save_txt(txt):
-    with open("/data/data/com.github.shadowsocks/log", "a") as f:
+    with open("/data/user/0/com.github.shadowsocks/log", "a") as f:
         txt =str(time.time()) + ' ' + txt +'/n'
         f.write(txt)
 
