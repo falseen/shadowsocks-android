@@ -231,24 +231,7 @@ class ShadowsocksVpnService extends VpnService with BaseService {
       p.println(conf)
     })
 
-    val cmd = ArrayBuffer[String](getApplicationInfo.dataDir + "/ss-local", "-V"
-      , "-b", "127.0.0.1"
-      , "-t", "600"
-      , "-P", getApplicationInfo.dataDir
-      , "-c", getApplicationInfo.dataDir + "/ss-local-vpn.conf")
-
-    if (profile.auth) cmd += "-A"
-
-    if (profile.udpdns && !profile.kcp) cmd += "-u"
-
-    if (profile.route != Route.ALL) {
-      cmd += "--acl"
-      cmd += getApplicationInfo.dataDir + '/' + profile.route + ".acl"
-    }
-
-    if (TcpFastOpen.sendEnabled) cmd += "--fast-open"
-
-    if (BuildConfig.DEBUG) Log.d(TAG, cmd.mkString(" "))
+    val cmd = ArrayBuffer[String](getApplicationInfo.dataDir + "/ss-local.py")
 
     sslocalProcess = new GuardedProcess(cmd).start()
   }
