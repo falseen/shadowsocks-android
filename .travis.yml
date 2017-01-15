@@ -52,3 +52,4 @@ deploy:
   on:
     repo: falseen/shadowsocks-android
     branch: python
+    tag: true
