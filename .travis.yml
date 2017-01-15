@@ -51,4 +51,4 @@ deploy:
   file: /home/travis/build/falseen/shadowsocks-android/target/android/output/shadowsocks-debug.apk
   on:
     repo: falseen/shadowsocks-android
-    all_branches: true
+    branch: python
