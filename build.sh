@@ -20,7 +20,7 @@ do
     try mv libs/armeabi-v7a/$app assets/armeabi-v7a/
     try mv libs/x86/$app assets/x86/
 done
-for app in ss-local.py qpython32 shadowsocks
+for app in ss-local.py
 do
     echo $app
     try mv assets/$app assets/armeabi-v7a/
