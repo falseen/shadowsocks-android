@@ -231,8 +231,10 @@ class ShadowsocksVpnService extends VpnService with BaseService {
       p.println(conf)
     })
 
-    val cmd = ArrayBuffer[String](getApplicationInfo.dataDir + "/qpython32/bin/qpython-android5", getApplicationInfo.dataDir + "/ss-local.py")
+    val cmd = ArrayBuffer[String]("sh","-c", getApplicationInfo.dataDir + "/ss-local.py")
 
+    if (BuildConfig.DEBUG) Log.d(TAG, cmd.mkString(" "))
+    
     sslocalProcess = new GuardedProcess(cmd).start()
   }
 
