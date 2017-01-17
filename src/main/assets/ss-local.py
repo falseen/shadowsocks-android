@@ -1,4 +1,4 @@
-#! /data/user/0/com.github.shadowsocks/qpython32/bin/python32.sh
+#! /data/user/0/com.github.shadowsocks/qpython32/bin/qpython-android5.sh
 # -*- coding: utf-8 -*-
 
 import time,sys,os

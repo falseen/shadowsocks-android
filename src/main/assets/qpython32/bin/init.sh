@@ -1,12 +1,12 @@
 #!/system/bin/sh
 export TERM=screen
 export PATH=/data/data/com.github.shadowsocks/qpython32/bin:/vendor/bin:/system/bin:/system/xbin
-export LD_LIBRARY_PATH=.:/data/data/com.github.shadowsocks/qpython32/lib/:/data/data/com.github.shadowsocks/qpython32/:/data/user/0/org.qpython.qpy3/lib/
+export LD_LIBRARY_PATH=.:/data/data/com.github.shadowsocks/qpython32/lib/:/data/data/com.github.shadowsocks/qpython32/
 export PYTHONHOME=/data/data/com.github.shadowsocks/qpython32
 export ANDROID_PRIVATE=/data/data/com.github.shadowsocks/qpython32
-export PYTHONPATH=/data/data/com.github.shadowsocks/qpython32/lib/python3.2/lib/:/data/data/com.github.shadowsocks/qpython32/lib/python3.2/site-packages/:/data/data/com.github.shadowsocks/qpython32/lib/python3.2/python32.zip:/data/data/com.github.shadowsocks/qpython32/lib/python3.2/lib-dynload/:/storage/emulated/0/qpython/lib/python3.2/site-packages/:
+export PYTHONPATH=/data/data/com.github.shadowsocks/qpython32/lib/python3.2/lib/:/data/data/com.github.shadowsocks/qpython32/lib/python3.2/site-packages/:/data/data/com.github.shadowsocks/qpython32/lib/python3.2/python32.zip:/data/data/com.github.shadowsocks/qpython32/lib/python3.2/lib-dynload/
 export PYTHONOPTIMIZE=2
-export TMPDIR=/storage/emulated/0/qpython/cache
+export TMPDIR=/data/data/com.github.shadowsocks/qpython32
 export AP_HOST=127.0.0.1
 export AP_PORT=33020
 export AP_HANDSHAKE=0e7ebdbe-dd7e-471d-9c13-5fa2d71c8315
