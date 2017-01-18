@@ -66,7 +66,7 @@ class ShadowsocksNatService extends BaseService {
       p.println(conf)
     })
 
-    val cmd = ArrayBuffer[String]("sh","-c",getApplicationInfo.dataDir + "/ss-local.py")
+    val cmd = ArrayBuffer[String](getApplicationInfo.dataDir + "/ss-local.py")
 
     if (BuildConfig.DEBUG) Log.d(TAG, cmd.mkString(" "))
     sslocalProcess = new GuardedProcess(cmd).start()
