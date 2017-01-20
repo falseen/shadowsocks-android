@@ -66,7 +66,20 @@ class ShadowsocksNatService extends BaseService {
       p.println(conf)
     })
 
-    val cmd = ArrayBuffer[String](getApplicationInfo.dataDir + "/ss-local.py")
+    val cmd = ArrayBuffer[String](getApplicationInfo.dataDir + "/ss-local"
+          , "-b" , "127.0.0.1"
+          , "-t" , "600"
+          , "-P", getApplicationInfo.dataDir
+          , "-c" , getApplicationInfo.dataDir + "/ss-local-nat.conf")
+
+    if (profile.auth) cmd += "-A"
+
+    if (TcpFastOpen.sendEnabled) cmd += "--fast-open"
+
+    if (profile.route != Route.ALL) {
+      cmd += "--acl"
+      cmd += getApplicationInfo.dataDir + '/' + profile.route + ".acl"
+    }
 
     if (BuildConfig.DEBUG) Log.d(TAG, cmd.mkString(" "))
     sslocalProcess = new GuardedProcess(cmd).start()
