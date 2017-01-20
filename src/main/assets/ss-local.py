@@ -10,9 +10,9 @@ def save_txt(txt):
         txt =str(time.time()) + ' ' + txt +'/n'
         f.write(txt)
 
-save_txt('start')
-save_txt(str(sys.argv))
-
+#save_txt('start')
+#save_txt(str(sys.argv))
+sys.argv = [sys.argv[0]]
 local_main()
 
 
