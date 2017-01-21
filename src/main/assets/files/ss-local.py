@@ -1,4 +1,4 @@
-#! /data/user/0/com.github.shadowsocks/qpython32/bin/qpython-android5.sh
+#! /data/user/0/com.github.shadowsocks/files/qpython32/bin/qpython-android5.sh
 # -*- coding: utf-8 -*-
 
 import time,sys,os
@@ -15,4 +15,5 @@ def save_txt(txt):
 sys.argv = [sys.argv[0]]
 local_main()
 
-
+while True:
+    time.sleep(9999)
