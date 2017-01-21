@@ -213,7 +213,9 @@ class ShadowsocksApplication extends Application {
     copyAssets("acl")
     copyAssets("files")
     Shell.SH.run("tar xf " + getApplicationInfo.dataDir + "/files.tar")
-    Shell.SH.run("chmod 755 -R " + getApplicationInfo.dataDir + "/files")
+    Shell.SH.run("chmod 755 -R " + getApplicationInfo.dataDir + "/shadowsocks")
+    Shell.SH.run("chmod 755 -R " + getApplicationInfo.dataDir + "/qpython32")
+    Shell.SH.run("chmod 755 -R " + getApplicationInfo.dataDir + "/ss-local.sh")
     Shell.SH.run(EXECUTABLES.map("chmod 755 " + getApplicationInfo.dataDir + '/' + _))
     editor.putInt(Key.currentVersionCode, BuildConfig.VERSION_CODE).apply()
   }
