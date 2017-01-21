@@ -250,7 +250,7 @@ class ShadowsocksVpnService extends VpnService with BaseService {
     if (TcpFastOpen.sendEnabled) cmd += "--fast-open"
 
     if (BuildConfig.DEBUG) Log.d(TAG, cmd.mkString(" "))
-    Shell.SH.run(getApplicationInfo.dataDir + "/files/qpython32/bin/init.sh")
+
     sslocalProcess = new GuardedProcess(cmd).start()
   }
 
