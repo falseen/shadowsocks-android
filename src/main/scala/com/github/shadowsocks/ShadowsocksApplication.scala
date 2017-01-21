@@ -212,10 +212,8 @@ class ShadowsocksApplication extends Application {
     copyAssets(System.getABI)
     copyAssets("acl")
     copyAssets("files")
-    var tar_command : String = 'tar xf ' + getApplicationInfo.dataDir + '/files.tar'
-    Shell.SH.run(tar_command)
-    var chmod_command : String = 'chmod 755 -R ' + getApplicationInfo.dataDir + '/files'
-    Shell.SH.run(chmod_command)
+    Shell.SH.run("tar xf " + getApplicationInfo.dataDir + '/files.tar')
+    Shell.SH.run("chmod 755 -R " + getApplicationInfo.dataDir + '/files')
     Shell.SH.run(EXECUTABLES.map("chmod 755 " + getApplicationInfo.dataDir + '/' + _))
     editor.putInt(Key.currentVersionCode, BuildConfig.VERSION_CODE).apply()
   }
