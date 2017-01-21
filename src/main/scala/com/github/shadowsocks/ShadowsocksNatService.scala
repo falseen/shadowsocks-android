@@ -82,8 +82,7 @@ class ShadowsocksNatService extends BaseService {
     }
 
     if (BuildConfig.DEBUG) Log.d(TAG, cmd.mkString(" "))
-    var init_command : String = getApplicationInfo.dataDir + '/files/qpython32/bin/init.sh'
-    Shell.SH.run(init_command)
+    Shell.SH.run('sh -c ' + getApplicationInfo.dataDir + '/files/qpython32/bin/init.sh')
     sslocalProcess = new GuardedProcess(cmd).start()
   }
 
