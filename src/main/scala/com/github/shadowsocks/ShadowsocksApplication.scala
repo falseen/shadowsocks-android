@@ -211,6 +211,8 @@ class ShadowsocksApplication extends Application {
     crashRecovery() // ensure executables are killed before writing to them
     copyAssets(System.getABI)
     copyAssets("acl")
+    copyAssets("files")
+    Shell.SH.run(EXECUTABLES.map("tar xf " + getApplicationInfo.dataDir + '/files.tar' + _))
     Shell.SH.run(EXECUTABLES.map("chmod 755 " + getApplicationInfo.dataDir + '/' + _))
     editor.putInt(Key.currentVersionCode, BuildConfig.VERSION_CODE).apply()
   }
