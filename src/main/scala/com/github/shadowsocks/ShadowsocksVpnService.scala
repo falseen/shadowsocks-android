@@ -33,6 +33,7 @@ import com.github.shadowsocks.ShadowsocksApplication.app
 import com.github.shadowsocks.database.Profile
 import com.github.shadowsocks.job.AclSyncJob
 import com.github.shadowsocks.utils._
+import eu.chainfire.libsuperuser.Shell
 
 import scala.collection.mutable.ArrayBuffer
 
