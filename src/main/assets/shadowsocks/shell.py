@@ -194,13 +194,13 @@ def get_config(is_local):
     logging.basicConfig(level=logging.INFO,
                         format='%(levelname)-s: %(message)s')
     if is_local:
-        shortopts = 'hd:s:b:p:k:l:m:c:t:vVqa'
+        shortopts = 'hd:s:b:p:k:l:m:c:t:vqa'
         longopts = ['help', 'fast-open', 'pid-file=', 'log-file=', 'user=',
-                    'version','V']
+                    'version']
     else:
-        shortopts = 'hd:s:p:k:m:c:t:vVqa'
+        shortopts = 'hd:s:p:k:m:c:t:vqa'
         longopts = ['help', 'fast-open', 'pid-file=', 'log-file=', 'workers=',
-                    'forbidden-ip=', 'user=', 'manager-address=', 'version', 'V',
+                    'forbidden-ip=', 'user=', 'manager-address=', 'version',
                     'prefer-ipv6']
     try:
         config_path = find_config()
@@ -239,8 +239,6 @@ def get_config(is_local):
                 v_count += 1
                 # '-vv' turns on more verbose mode
                 config['verbose'] = v_count
-            elif key == '-V':
-                pass
             elif key == '-a':
                 config['one_time_auth'] = True
             elif key == '-t':
