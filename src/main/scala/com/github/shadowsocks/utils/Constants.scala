@@ -27,6 +27,7 @@ object Executable {
   val SS_TUNNEL = "ss-tunnel"
   val TUN2SOCKS = "tun2socks"
   val KCPTUN = "kcptun"
+  val SS_LOCAL_PY = "ss-local.py"
 }
 
 object ConfigUtils {
