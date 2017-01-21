@@ -30,3 +30,6 @@ src/main/libs
 src/main/assets/armeabi-v7a/*
 src/main/assets/x86/*
 jni/Application.mk
+
+#python
+__pycache__
