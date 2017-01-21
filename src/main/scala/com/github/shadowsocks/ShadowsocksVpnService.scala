@@ -231,7 +231,7 @@ class ShadowsocksVpnService extends VpnService with BaseService {
       p.println(conf)
     })
 
-    val cmd = ArrayBuffer[String](getApplicationInfo.dataDir + "/ss-local", "-V"
+    val cmd = ArrayBuffer[String](getApplicationInfo.dataDir + "/files/qpython32/bin/python-android5", getApplicationInfo.dataDir + "/ss-local", "-V"
       , "-b", "127.0.0.1"
       , "-t", "600"
       , "-P", getApplicationInfo.dataDir
